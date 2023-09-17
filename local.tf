@@ -1,3 +1,3 @@
 locals {
-  tag = {Owner = "Aneesh BS"}
+  tag = { Owner = "Aneesh BS" }
 }
