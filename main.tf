@@ -1,10 +1,10 @@
 
-/*
+
 data "azurerm_key_vault_secret" "password" {
   name         = "vm-password"
   key_vault_id = var.kv-id
 }
-*/
+
 
 resource "azurerm_windows_virtual_machine" "assmnt-win-vm" {
   name                = var.win-vm-name
