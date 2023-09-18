@@ -70,5 +70,5 @@ variable "lin-custScript-command" {
 
 variable "kv-id" {
   type    = string
-  default = "if for keyvault"
+  default = "id for keyvault"
 }
