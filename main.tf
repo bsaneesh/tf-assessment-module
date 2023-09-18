@@ -38,13 +38,13 @@ resource "azurerm_virtual_machine_extension" "win-cust-script" {
   type                 = "CustomScriptExtension"
   type_handler_version = "1.10"
 
-  settings = <<SETTINGS
+  settings   = <<SETTINGS
  {
   "fileUris": ["${var.win-custScript-fileuris}"],
   "commandToExecute": "powershell -ExecutionPolicy Unrestricted -file ${var.Win-custScript-command}"
  }
 SETTINGS
-depends_on = [ azurerm_windows_virtual_machine.assmnt-win-vm ]
+  depends_on = [azurerm_windows_virtual_machine.assmnt-win-vm]
 }
 
 
@@ -87,5 +87,5 @@ resource "azurerm_virtual_machine_extension" "lin-cust-script" {
     "commandToExecute" = "sh ${var.lin-custScript-command}"
     }
   )
-  depends_on = [ azurerm_linux_virtual_machine.assmnt-linux-vm ]
+  depends_on = [azurerm_linux_virtual_machine.assmnt-linux-vm]
 }
